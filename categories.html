@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Categories - Browse by Genre | deadlock.baby</title>
+    <meta name="description" content="Browse games by category on deadlock.baby. Find action, adventure, puzzle, racing, sports, strategy and more types of games to play online.">
+    <link rel="canonical" href="https://deadlock.baby/categories.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            green: '#34C759',
+                            red: '#FF3B30',
+                            orange: '#FF9500',
+                            purple: '#AF52DE',
+                            gray: {
+                                100: '#F5F5F7',
+                                200: '#E5E5EA',
+                                300: '#D1D1D6',
+                                400: '#C7C7CC',
+                                500: '#8E8E93',
+                                600: '#636366',
+                                700: '#48484A',
+                                800: '#3A3A3C',
+                                900: '#1C1C1E',
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-apple-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0 flex items-center">
+                        <span class="text-apple-blue text-2xl font-bold">deadlock.baby</span>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <div class="hidden md:block">
+                        <div class="flex items-center space-x-4">
+                            <a href="/" class="px-3 py-2 text-sm font-medium text-apple-gray-700 hover:text-apple-blue">Home</a>
+                            <a href="/categories.html" class="px-3 py-2 text-sm font-medium text-apple-blue">Categories</a>
+                            <a href="/popular.html" class="px-3 py-2 text-sm font-medium text-apple-gray-700 hover:text-apple-blue">Popular</a>
+                            <a href="/new.html" class="px-3 py-2 text-sm font-medium text-apple-gray-700 hover:text-apple-blue">New Games</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative rounded-md shadow-sm max-w-xs w-64">
+                        <input type="text" class="form-input block w-full pl-10 sm:text-sm sm:leading-5 rounded-md border-apple-gray-300 focus:border-apple-blue focus:ring focus:ring-apple-blue focus:ring-opacity-50" placeholder="Search games...">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-apple-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden border-t border-apple-gray-200 bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-apple-gray-700 hover:text-apple-blue">Home</a>
+                <a href="/categories.html" class="block px-3 py-2 rounded-md text-base font-medium text-apple-blue">Categories</a>
+                <a href="/popular.html" class="block px-3 py-2 rounded-md text-base font-medium text-apple-gray-700 hover:text-apple-blue">Popular</a>
+                <a href="/new.html" class="block px-3 py-2 rounded-md text-base font-medium text-apple-gray-700 hover:text-apple-blue">New Games</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="/" class="text-apple-gray-500 hover:text-apple-blue">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-apple-gray-400 mx-2"></i>
+                        <span class="text-apple-gray-700">Categories</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-apple-gray-900 mb-4">Game Categories</h1>
+            <p class="text-lg text-apple-gray-700 max-w-3xl">Browse our extensive collection of online games by category. Find your favorite game genre and start playing instantly!</p>
+        </header>
+
+        <!-- Search and Filter -->
+        <div class="bg-white rounded-xl p-6 shadow-lg mb-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="relative rounded-md flex-grow max-w-lg">
+                    <input type="text" id="category-search" class="form-input block w-full pl-10 py-3 rounded-md border-apple-gray-300 focus:border-apple-blue focus:ring focus:ring-apple-blue focus:ring-opacity-50" placeholder="Search categories...">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-apple-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 bg-apple-blue text-white rounded-md hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-sort-alpha-down mr-2"></i>A-Z
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-apple-gray-300 text-apple-gray-700 rounded-md hover:bg-apple-gray-100 transition-colors">
+                        <i class="fas fa-fire-alt mr-2"></i>Popular
+                    </button>
+                    <button class="px-4 py-2 bg-white border border-apple-gray-300 text-apple-gray-700 rounded-md hover:bg-apple-gray-100 transition-colors">
+                        <i class="fas fa-plus mr-2"></i>New
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+            <!-- Action Category -->
+            <a href="/categories/action.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/FF9500/FFFFFF?text=Action+Games" alt="Action Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Action</h2>
+                            <p class="text-white text-sm">Fast-paced gameplay and reflexes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-gamepad mr-2 text-apple-orange"></i>
+                        <span class="font-medium">42 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Puzzle Category -->
+            <a href="/categories/puzzle.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/34C759/FFFFFF?text=Puzzle+Games" alt="Puzzle Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Puzzle</h2>
+                            <p class="text-white text-sm">Brain teasers and logical challenges</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-puzzle-piece mr-2 text-apple-green"></i>
+                        <span class="font-medium">38 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Racing Category -->
+            <a href="/categories/racing.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/AF52DE/FFFFFF?text=Racing+Games" alt="Racing Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Racing</h2>
+                            <p class="text-white text-sm">High-speed thrills and competitions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-car mr-2 text-apple-purple"></i>
+                        <span class="font-medium">29 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Adventure Category -->
+            <a href="/categories/adventure.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/5AC8FA/FFFFFF?text=Adventure+Games" alt="Adventure Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Adventure</h2>
+                            <p class="text-white text-sm">Story-driven exploration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-hiking mr-2 text-blue-400"></i>
+                        <span class="font-medium">35 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Strategy Category -->
+            <a href="/categories/strategy.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/007AFF/FFFFFF?text=Strategy+Games" alt="Strategy Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Strategy</h2>
+                            <p class="text-white text-sm">Tactical thinking and planning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-chess mr-2 text-apple-blue"></i>
+                        <span class="font-medium">31 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Sports Category -->
+            <a href="/categories/sports.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/4CD964/FFFFFF?text=Sports+Games" alt="Sports Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Sports</h2>
+                            <p class="text-white text-sm">Athletic competitions and challenges</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-basketball-ball mr-2 text-green-500"></i>
+                        <span class="font-medium">27 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- Shooter Category -->
+            <a href="/categories/shooter.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/FF3B30/FFFFFF?text=Shooter+Games" alt="Shooter Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">Shooter</h2>
+                            <p class="text-white text-sm">Fast-paced combat and aiming skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-crosshairs mr-2 text-apple-red"></i>
+                        <span class="font-medium">24 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+
+            <!-- RPG Category -->
+            <a href="/categories/rpg.html" class="category-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x600/8E8E93/FFFFFF?text=RPG+Games" alt="RPG Games" class="w-full h-full object-cover transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-4">
+                            <h2 class="text-2xl font-bold text-white">RPG</h2>
+                            <p class="text-white text-sm">Character development and storylines</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                    <div class="flex items-center text-apple-gray-700">
+                        <i class="fas fa-hat-wizard mr-2 text-apple-gray-500"></i>
+                        <span class="font-medium">19 Games</span>
+                    </div>
+                    <span class="text-apple-blue">View All <i class="fas fa-chevron-right ml-1"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Popular in All Categories -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-apple-gray-900 mb-6">Popular Across All Categories</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Popular Game Card 1 -->
+                <a href="/games/monster-survivors.html" class="game-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://placehold.co/600x400/FF9500/FFFFFF?text=Monster" alt="Monster Survivors" class="w-full h-32 object-cover transition-transform duration-300">
+                        <span class="absolute top-1 right-1 bg-apple-orange text-white text-xs px-1 rounded">Action</span>
+                    </div>
+                    <div class="p-2">
+                        <h3 class="font-bold text-sm text-apple-gray-900 truncate">Monster Survivors</h3>
+                        <div class="flex items-center text-apple-gray-500 text-xs">
+                            <span class="flex items-center"><i class="fas fa-star text-yellow-400 mr-1"></i> 4.8</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- More Popular Game Cards -->
+                <!-- 5 more similar cards -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-apple-gray-800 text-white mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">deadlock.baby</h3>
+                    <p class="text-apple-gray-300 text-sm">The best destination for free online games. Play instantly in your browser!</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-apple-gray-300 text-sm">
+                        <li><a href="/categories/action.html" class="hover:text-apple-blue">Action Games</a></li>
+                        <li><a href="/categories/puzzle.html" class="hover:text-apple-blue">Puzzle Games</a></li>
+                        <li><a href="/categories/racing.html" class="hover:text-apple-blue">Racing Games</a></li>
+                        <li><a href="/categories/adventure.html" class="hover:text-apple-blue">Adventure Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-apple-gray-300 text-sm">
+                        <li><a href="/popular.html" class="hover:text-apple-blue">Popular Games</a></li>
+                        <li><a href="/new.html" class="hover:text-apple-blue">New Games</a></li>
+                        <li><a href="/top-rated.html" class="hover:text-apple-blue">Top Rated</a></li>
+                        <li><a href="/featured.html" class="hover:text-apple-blue">Featured Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About</h3>
+                    <ul class="space-y-2 text-apple-gray-300 text-sm">
+                        <li><a href="/about.html" class="hover:text-apple-blue">About Us</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-apple-blue">Terms of Service</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-apple-gray-700 pt-6 text-center text-apple-gray-300 text-sm">
+                <p>&copy; 2024 deadlock.baby - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple category search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('category-search');
+            const categoryCards = document.querySelectorAll('.category-card');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                categoryCards.forEach(card => {
+                    const categoryName = card.querySelector('h2').textContent.toLowerCase();
+                    const categoryDesc = card.querySelector('h2 + p').textContent.toLowerCase();
+                    
+                    if (categoryName.includes(searchTerm) || categoryDesc.includes(searchTerm)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
