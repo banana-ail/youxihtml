@@ -421,4 +421,4 @@ document.addEventListener('DOMContentLoaded', function() {
         GameManager.addSampleGames();
         console.log('Sample games added');
     }
-});
+}); 
